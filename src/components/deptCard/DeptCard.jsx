@@ -4,22 +4,22 @@ const DeptCard = ({number, name, dept, date, id, currency,serialNumber, editDept
   return (
     <div className="flex justify-between py-2.5 border-b border-gray-500 items-center">
       <div className="flex gap-5">
-        <h3 className="font-semibold">
+        <h3 className="max-sm:text-sm font-semibold">
           {serialNumber}. {name}
         </h3>
-        <p>
+        <p className="max-sm:text-sm">
           {dept} (<span>{currency}</span>)
         </p>
-        <p><span className="font-semibold">Date: </span>{date}</p>
+        <p className="max-sm:text-sm"><span className=" font-semibold">Date: </span>{date}</p>
       </div>
       <div>
-        <p><span className="font-semibold">Tell: </span>{number}</p>
+        <p className="max-sm:text-sm"><span className="font-semibold">Tell: </span>{number}</p>
       </div>
       <div className="flex gap-5">
-        <button onClick={()=>deleteDept(id)} className="bg-red-500 text-white rounded-sm p-2 cursor-pointer">
+        <button onClick={()=>deleteDept(id)} className="bg-red-500 text-white rounded-sm p-2 cursor-pointer max-sm:text-sm">
           Delete
         </button>
-        <button onClick={()=>editDept(id)} className="bg-blue-500 text-white rounded-sm p-2 cursor-pointer">
+        <button onClick={()=>editDept(id)} className="bg-blue-500 text-white rounded-sm p-2 cursor-pointer max-sm:text-sm">
           Change
         </button>
       </div>

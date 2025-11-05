@@ -3,7 +3,6 @@ import DeptCard from "../components/deptCard/DeptCard";
 import { v4 as uuidv4 } from "uuid";
 import { Box, Modal, Typography } from "@mui/material";
 
-
 const style = {
   position: "absolute",
   top: "50%",
@@ -83,14 +82,24 @@ const DebtsPage = () => {
     setDepts(depts.filter((el) => el.id !== id));
   };
 
-  console.log(depts);
-
   return (
-    <section className="py-10">
-      <div className="flex justify-around">
-        <h1 className="text-2xl font-semibold">
+    <section className="w-[90%] mx-auto">
+      <div className="flex justify-center py-20 max-sm:py-5">
+        <h1 className="max-sm:text-lg text-2xl w-[80%] text-center">
+          Bu sayt qarzlarni boshqarish uchun mo'ljallangan. Siz kimdan qarz
+          olganingizni va kimga qarz berganingizni qo'shib borasiz. Qarz
+          uzilganidan kiyin o'chirib yuborasiz. Qarz olgan bo'lsangiz{" "}
+          <span className="font-semibold">To Borrow</span> qismiga o'ting. Qarz
+          bergan bo'lsangiz <span className="font-semibold">To Lendga</span>{" "}
+          o'ting
+        </h1>
+      </div>
+      <div className="flex justify-between">
+        <h1 className="max-sm:text-lg text-2xl font-semibold">
           All the debts I have given <br />
-          <span className="text-lg font-normal">(Men bergan barcha qarzlar)</span>
+          <span className="max-sm:text-sm text-lg font-normal">
+            (Men bergan barcha qarzlar)
+          </span>
         </h1>
         <div>
           <button
@@ -203,7 +212,7 @@ const DebtsPage = () => {
             Hozircha hech kimga qarz berganing yo'q...
           </p>
         ) : depts ? (
-          <div className="w-[90%] bg-gray-200 mx-auto rounded-md p-10 mt-10 shadow-[0_0_10px] shadow-gray-500">
+          <div className=" bg-gray-200 mx-auto rounded-md p-10 mt-10 shadow-[0_0_10px] shadow-gray-500">
             {depts.map((el, index) => (
               <DeptCard
                 deleteDept={deleteDept}
@@ -222,4 +231,4 @@ const DebtsPage = () => {
   );
 };
 
-export default DebtsPage
+export default DebtsPage;

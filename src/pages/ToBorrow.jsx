@@ -8,7 +8,12 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "60%",
+  width: {
+    xs:"90%",
+    sm:"70%",
+    md:"60%",
+    xl:"50%"
+  },
   bgcolor: "background.paper",
   boxShadow: 14,
   p: 4,
@@ -86,10 +91,20 @@ const HomePage = () => {
 
   return (
     <section className="py-10">
+      <div className="flex justify-center py-20 max-sm:py-5">
+        <h1 className="max-sm:text-lg text-2xl w-[80%] text-center">
+          Bu sayt qarzlarni boshqarish uchun mo'ljallangan. Siz kimdan qarz
+          olganingizni va kimga qarz berganingizni qo'shib borasiz. Qarz
+          uzilganidan kiyin o'chirib yuborasiz. Qarz olgan bo'lsangiz{" "}
+          <span className="font-semibold">To Borrow</span> qismiga o'ting. Qarz
+          bergan bo'lsangiz <span className="font-semibold">To Lendga</span>{" "}
+          o'ting
+        </h1>
+      </div>
       <div className="flex justify-around">
-        <h1 className="text-2xl font-semibold">
+        <h1 className="max-sm:text-lg text-2xl font-semibold">
           All the debts I have taken on <br />
-          <span className="text-lg font-normal">(Men olgan barcha qarzlar)</span>
+          <span className="max-sm:text-sm text-lg font-normal">(Men olgan barcha qarzlar)</span>
         </h1>
         <div>
           <button
@@ -98,7 +113,7 @@ const HomePage = () => {
           >
             Add debt
           </button>
-          <Modal
+          <Modal 
             open={open}
             onClose={handleClose}
             aria-labelledby="modal-modal-title"

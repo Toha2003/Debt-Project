@@ -19,8 +19,6 @@ const LoginPage = () => {
   const handleUser = (e)=>{
      setUser({...user, [e.target.id]:e.target.value})
   }
-  console.log(user);
-  
   return (
     <div className="flex justify-center items-center h-screen">
 
