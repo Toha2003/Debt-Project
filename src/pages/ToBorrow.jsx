@@ -90,7 +90,7 @@ const HomePage = () => {
   console.log(depts);
 
   return (
-    <section className="py-10">
+    <section className="w-[90%] mx-auto">
       <div className="flex justify-center py-10 max-sm:py-5">
         <h1 className="max-sm:text-lg text-2xl w-[80%] text-center">
           Bu sayt qarzlarni boshqarish uchun mo'ljallangan. Siz kimdan qarz
@@ -101,7 +101,7 @@ const HomePage = () => {
           o'ting
         </h1>
       </div>
-      <div className="flex justify-around">
+      <div className="flex justify-between">
         <h1 className="max-sm:text-lg text-2xl font-semibold">
           All the debts I have taken on <br />
           <span className="max-sm:text-sm text-lg font-normal">(Men olgan barcha qarzlar)</span>
@@ -218,7 +218,7 @@ const HomePage = () => {
             Hozircha hech qanday qarzingiz yo'q...
           </p>
         ) : depts ? (
-          <div className="w-[90%] bg-gray-200 mx-auto rounded-md p-10 mt-10 shadow-[0_0_10px] shadow-gray-500">
+          <div className=" bg-gray-200 mx-auto rounded-md p-10 mt-10 shadow-[0_0_10px] shadow-gray-500">
             {depts.map((el, index) => (
               <DeptCard
                 deleteDept={deleteDept}
