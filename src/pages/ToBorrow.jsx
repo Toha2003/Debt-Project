@@ -91,7 +91,7 @@ const HomePage = () => {
 
   return (
     <section className="py-10">
-      <div className="flex justify-center py-20 max-sm:py-5">
+      <div className="flex justify-center py-10 max-sm:py-5">
         <h1 className="max-sm:text-lg text-2xl w-[80%] text-center">
           Bu sayt qarzlarni boshqarish uchun mo'ljallangan. Siz kimdan qarz
           olganingizni va kimga qarz berganingizni qo'shib borasiz. Qarz
